@@ -1,0 +1,27 @@
+
+<a routerLink="/chaussure/add">
+  <h3 class="btn btn-primary">Ajouter</h3>
+</a>
+<br>
+<br>
+
+<div class="liste">
+
+  <div *ngFor="let chaussure of listeChaussures" class="card" style="width: 18rem;">
+    <img src="../../../assets/images/{{chaussure.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{chaussure.nom}}</h5>
+      <p class="card-text">Marque: {{chaussure.marque}} <br>
+        Type: {{chaussure.type}} <br> 
+        Taille: {{chaussure.taille}} </p>
+      <a class="btn btn-success w-100" [routerLink]="['/chaussure', chaussure.id]">Details</a>
+      <br>
+      <a class="btn btn-danger w-50" (click)="deleteChaussure(chaussure.id)">Supprimer</a>
+      <a class="btn btn-info w-50" [routerLink]="['/edit-chaussure', chaussure.id]">Modifier</a>
+
+    </div>
+  </div>
+  <p>Nombre de chaussures : {{listeChaussures.length}}</p>
+
+
+</div>

@@ -1,0 +1,40 @@
+{
+  "chaussure": [
+    {
+      "id": 1,
+      "nom": "F50",
+      "image": "f50.jpg",
+      "marque": "Adidas",
+      "type": "Football",
+      "taille": 43,
+      "dateEntree": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "id": 2,
+      "nom": "F51",
+      "image": "f50.jpg",
+      "marque": "Adidas",
+      "type": "Football",
+      "taille": 45,
+      "dateEntree": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "id": 3,
+      "image": "puma.jfif",
+      "nom": "Rogues",
+      "marque": "Puma",
+      "type": "foot",
+      "taille": 55,
+      "dateEntree": "2020-06-30T13:47:47.939Z"
+    },
+    {
+      "id": 4,
+      "image": "nike.jpg",
+      "nom": "air",
+      "marque": "Nike",
+      "type": "ville",
+      "taille": 66,
+      "dateEntree": "2020-06-30T14:01:08.890Z"
+    }
+  ]
+}

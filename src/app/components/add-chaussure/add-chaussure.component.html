@@ -1,0 +1,58 @@
+<br>
+<div class="bg-light">
+  <h2> Ajouter une paire de chaussures : </h2>
+
+  <!-- formulaire Angular, fonction à lancer au submit -->
+  <form #chaussureForm="ngForm" (ngSubmit)="submitChaussure()">
+
+    <!-- [(ngModel)] pour attribuer la valeur à un attribut de l'objet, #truc pour  -->
+
+
+    <!-- nom -->
+    <label for="nom">Nom de la chaussure : </label>
+    <input type="text" class="form-control" name="nom" id="nom" required [(ngModel)]="chaussure.nom" #nom="ngModel">
+    <br>
+    <div [hidden]="nom.valid" class="alert alert-danger">
+      Le nom de la chaussure est requis
+    </div>
+
+    <!-- marque -->
+    <div>
+      <label for="Marque">Marque de la chaussure : </label> <br>
+      <input type="radio" value="Nike" name="marque" [(ngModel)]="chaussure.marque" required #marque="ngModel"> Nike
+      <br>
+      <input type="radio" value="Adidas" name="marque" [(ngModel)]="chaussure.marque" required #marque="ngModel"> Adidas
+      <br>
+      <input type="radio" value="Puma" name="marque" [(ngModel)]="chaussure.marque" required #marque="ngModel"> Puma
+      <br>
+    </div>
+    <br>
+
+
+    <!-- type -->
+    <label for="type">type de la chaussure : </label>
+    <input type="text" class="form-control" name="type" id="type" required [(ngModel)]="chaussure.type" #type="ngModel">
+    <br>
+    <div [hidden]="type.valid" class="alert alert-danger">
+      Les type de la chaussure sont requis
+    </div>
+
+    <!-- taille -->
+    <label for="taille">taille de la chaussure : </label>
+    <input type="number" class="form-control" name="taille" id="taille" required [(ngModel)]="chaussure.taille"
+      #taille="ngModel"> <br>
+    <div [hidden]="taille.valid" class="alert alert-danger">
+      Le taille de la chaussure est requis
+    </div>
+
+    <!-- image -->
+    <label for="image">Image de la chaussure : </label>
+    <input type="string" class="form-control" name="image" id="image" required [(ngModel)]="chaussure.image"
+      #image="ngModel"> <br>
+    <div [hidden]="image.valid" class="alert alert-danger">
+      L'image de la chaussure est requis
+    </div>
+
+    <input [disabled]='!chaussureForm.valid' id="submitchaussure" type="submit" value="Envoyer">
+  </form>
+</div>
